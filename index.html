@@ -25,8 +25,14 @@
       document.getElementById("start_stop").addEventListener("click", function(){
         var start = new Date();
 
-        document.getElementById("timer").innerHTML = start.getTime();
+        setInterval(goTimer, 10);
       });
+
+      var goTimer = function(){
+        var now = new Date();
+
+        document.getElementById("timer"). innerHTML = (now.getTime());
+      }
     </script>
 </body>
 </html>
