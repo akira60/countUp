@@ -27,7 +27,7 @@
         if(this.innerHTML === "START"){
           start = new Date();
 
-          window.setInterval(goTimer, 10);
+          timer_id = window.setInterval(goTimer, 10);
   
           this.innerHTML = "STOP";
           this.classList.remove("btn-success");
@@ -36,6 +36,7 @@
           this.innerHTML = "START";
           this.classList.remove("btn-danger");
           this.classList.add("btn-success");
+          window.clearInterval(timer_id);
         }
 
       });
