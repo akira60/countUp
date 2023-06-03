@@ -28,6 +28,7 @@
             }
             return value;
         };
+      document.getElementById("start_stop").addEventListener("click", function(){
         var now = new Date();
         var seconds = now.getSeconds();
         addZero(seconds);
@@ -37,6 +38,7 @@
         addZero(hours);
 
         document.getElementById("timer").innerHTML = hours + ":" + minutes + ":" + seconds;
+      });
     </script>
 </body>
 </html>
