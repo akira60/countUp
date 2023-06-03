@@ -24,13 +24,20 @@
     <script>
       var start;
       document.getElementById("start_stop").addEventListener("click", function(){
-        start = new Date();
+        if(this.innerHTML === "START"){
+          start = new Date();
 
-        window.setInterval(goTimer, 10);
+          window.setInterval(goTimer, 10);
+  
+          this.innerHTML = "STOP";
+          this.classList.remove("btn-success");
+          this.classList.add("btn-danger");
+        } else{
+          this.innerHTML = "START";
+          this.classList.remove("btn-danger");
+          this.classList.add("btn-success");
+        }
 
-        this.innerHTML = "STOP";
-        this.classList.remove("btn-primary");
-        this.classList.add("btn-danger");
       });
       var addZero = function(value){
         if(value < 10){
