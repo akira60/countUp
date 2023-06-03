@@ -22,27 +22,11 @@
         </div>
     </div>
     <script>
-        var addZero = function(value) {
-            if(value < 10){
-                value = '0' + value;
-            }
-            return value;
-        };
+      document.getElementById("start_stop").addEventListener("click", function(){
+        var start = new Date();
 
-     var main = function(){
-        var now = new Date();
-        var seconds = now.getSeconds();
-        addZero(seconds);
-        var minutes = now.getMinutes();
-        addZero(minutes);
-        var hours = now.getHours();
-        addZero(hours);
-
-        document.getElementById("timer").innerHTML = hours + ":" + minutes + ":" + seconds;
-     }
-    
-     document.getElementById("start_stop").addEventListener("click", main);
-
+        document.getElementById("timer").innerHTML = start.getTime();
+      });
     </script>
 </body>
 </html>
