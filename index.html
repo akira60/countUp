@@ -27,6 +27,10 @@
         start = new Date();
 
         window.setInterval(goTimer, 10);
+
+        this.innerHTML = "STOP";
+        this.classList.remove("btn-primary");
+        this.classList.add("btn-danger");
       });
       var addZero = function(value){
         if(value < 10){
@@ -45,7 +49,7 @@
 
         seconds = seconds - minutes * 60;
         minutes = minutes - hours * 60;
-        
+
         seconds = addZero(seconds);
         minutes = addZero(minutes);
         hours = addZero(hours);
